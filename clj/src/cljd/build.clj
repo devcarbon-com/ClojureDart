@@ -236,7 +236,7 @@
                                 ns)
                               seq
                               compile-nses)
-                        (when flutter-stdin
+                        #_ (when flutter-stdin
                           (locking flutter-stdin
                             (doto flutter-stdin (.write "r") .flush))))))]
               (watch-dirs-until true? (or (boolean compilation-success) :first)
